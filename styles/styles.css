@@ -884,11 +884,15 @@ padding-bottom: 200px;
     line-height: calc(14/12);
     letter-spacing: 0.01em;
     padding: 12px;
-    color: var(--textarea-modal-cl);
+    color: var(--black-txt-cl);
     height: 120px;
     resize: none;
 }
+.form-textarea:placeholder {
 
+color:  var(--textarea-modal-cl);
+
+}
 .form-checkbox {
     display: flex;
     align-items: center;
@@ -899,39 +903,50 @@ padding-bottom: 200px;
     user-select: none;
     cursor: pointer;
 }
-.form-checked {
-    opacity: 0;
-    border-color: var(--accent-txt-cl);
-    fill: var(--accent-txt-cl);
-    transition-property: fill;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-}
 .form-unchecked {
     opacity: 1;
-    fill: var(--black-txt-cl);
+    border-color: var(--black-txt-cl);
     border-radius: 4px;
-    transition-property: fill;
+    transition-property: opacity;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 }
-.form-checkbox-input:checked + .form-icons .form-checked {
+.form-checked {
+    opacity: 0;
+    fill: var(--accent-bg-cl);
+    background-color: var(--accent-bg-cl);
+    transition-property: opacity;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+  
+  .form-checkbox:checked + .form-icons .form-checked {
+    opacity: 1;
+  }
+  .form-unchecked {
+    transition-property: opacity;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .form-checkbox:checked + .form-icons .form-unchecked {
+    opacity: 0;
+  }
+
+.form-icons:hover .form-unchecked,
+.form-icons:focus .form-unchecked  {
+   opacity: 0;
+}
+.form-icons:hover .form-checked,
+.form-icons:focus .form-checked {
     opacity: 1;
 }
 
-.form-checkbox-input:checked + .form-icons .form-unchecked {
-    opacity: 0;
-} 
-.form-icons:focus .form-unchecked ,
-.form-icons:hover .form-unchecked  {
-fill: var(--accent-bg-cl);
-}
-.form-icons:focus .form-checked ,
-.form-icons:hover .form-checked  {
-fill: var(--accent-bg-cl);
-}
+
 
 .form-agree {
 font-size: 14px;
@@ -948,3 +963,5 @@ color: var(--accent-txt-cl);
     display: block;
     margin: 0 auto;
 }
+
+
