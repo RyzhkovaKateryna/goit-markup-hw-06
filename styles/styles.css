@@ -722,6 +722,7 @@ padding-bottom: 200px;
 }
 
 .footer-title {
+    display: block;
     font-family:var(--main-font);
     font-weight: 700;
     font-size: 14px;
@@ -729,7 +730,7 @@ padding-bottom: 200px;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--light-txt-cl);
-
+    margin-bottom: 20px;
 
 }
 .footer-form input::placeholder {
@@ -754,7 +755,7 @@ padding-bottom: 200px;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
-    margin-top: 20px;
+
 }
 
 .footer-input:hover,
@@ -937,7 +938,7 @@ padding-bottom: 200px;
     resize: none;
 }
 
-.form-checkbox {
+/* .form-checkbox {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -990,7 +991,7 @@ padding-bottom: 200px;
     opacity: 1;
 } */
 
-
+ */
 
 .form-agree {
 font-size: 14px;
