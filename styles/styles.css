@@ -949,41 +949,27 @@ padding-bottom: 200px;
 
 .form-checked {
     opacity: 0;
-    fill: var(--accent-txt-cl);
+    border: transparent;
     transition-property: opacity;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  }
+}
   
-  .form-checkbox-input:checked + .form-icons .form-checked {
+.form-checkbox-input:checked + .form-icons .form-checked {
     opacity: 1;
-  }
-  .form-unchecked {
+}
+.form-unchecked {
     opacity: 1;
-    border-color: var(--black-txt-cl);
     border-radius: 4px;
     transition-property: opacity;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  }
+}
   
-  .form-checkbox-input:checked + .form-icons .form-unchecked {
+.form-checkbox-input:checked + .form-icons .form-unchecked {
     opacity: 0;
-  }
-  
-  /* Перевірка стану чекбокса перед встановленням стану фокусу сусідньому елементу */
-  .form-checkbox-input:focus-visible:not(:checked) + .form-icons,
-  .form-checkbox-input:focus-visible:checked + .form-icons,
-  .rorm-checkbox-input:disabled + .form-icons {
-    outline: transparent;
-  }
-  
-  /* Встановлення стану фокусу сусідньому елементу іконці */
-  .form-checkbox-input:focus:focus-visible + .form-icons {
-    outline: 2px solid rgb(56, 87, 107);
-    outline-offset: 1px;
-    border-radius: 2px;
-  } 
+}
+
 
 .form-agree {
 font-size: 14px;
